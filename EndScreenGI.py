@@ -6,7 +6,7 @@ import sys
 import saveload
 #Must include variables 'waittime' and 'text' to be used in the 'LineDelayEffect' function
 #Call function at the end of the text stated
-#Example
+#Example:
 #waittime = 1
 #text = """whatever
 #          you want"""
@@ -131,7 +131,7 @@ def levelart1():
         /**    /**    /**/**  //** /**   //****      /*    /**/**//////**//**    **/**//**       /**   //****//**     ** /**** //****// 
         /**    //******* /**   //**/**    //***      /******* /**     /** //****** /** //**      /**    //*** //*******  /**/   ///** **
         //      ///////  //     // //      ///       ///////  //      //   //////  //   //       //      ///   ///////   //       // // """
-        LineDelayEffect(text, waittime)
+    LineDelayEffect(text, waittime)
 def fightart1():
     waittime = 0
     text = """
