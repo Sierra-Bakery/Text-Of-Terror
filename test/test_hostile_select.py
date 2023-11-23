@@ -6,6 +6,7 @@ sys.path.append(str(current_dir.parent))
 
 import Hostile
 
+PlayerStats = []
 def test_hostile(capsys):
   PlayerStats[4] = 10
   EnemyType = Hostile.HostileSlct(PlayerStats)
@@ -16,3 +17,5 @@ def test_hostile(capsys):
   expected_out = '''MEMEZ.exe'''.strip()
 
   assert console_out == expected_out
+
+test_hostile
