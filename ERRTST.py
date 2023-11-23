@@ -19,7 +19,9 @@ def normal():
             return variable
 def letterinput():
     # Defines the desired input, gets it from the user, and assigns it to be tested if it is okay to be passed.
-    inpt = str(input("[Y/N] >>> "))
+    inptnml = str(input("[Y/N] >>> "))
+    inpt = inptnml.upper()
+    print("You put ",inpt.upper())
     while inpt != "Y" and inpt != "N":
         # If user input is incorrect, or doesn't align to the requirement, it will ask over and over again until correct.
         print("Please answer with CAPITAL Y or N!")
