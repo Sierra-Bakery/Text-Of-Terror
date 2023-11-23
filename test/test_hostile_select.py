@@ -14,8 +14,6 @@ def test_hostile(capsys):
   # use strip() to remove special characters from the expected and console out
   # to compare them more easily
   console_out = capsys.readouterr().out.strip()
-  expected_out = '''MEMEZ.exe'''.strip()
+  expected_out = 'MEMEZ.exe'.strip()
 
   assert console_out == expected_out
-
-test_hostile
