@@ -6,6 +6,7 @@
 #Also do everything that it needs to do for it to run smoothly with the other modules.
 #This starts the game, asks for type of start and plays each level in correct order.
 #Going to the shop after every level.
+from Arena import ArenaDec
 import ERRTST
 import EndScreenGI
 import Levels
