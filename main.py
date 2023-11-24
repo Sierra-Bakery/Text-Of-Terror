@@ -12,7 +12,6 @@ import Levels
 import Shop
 import sys
 import time
-
 import devcheats
 import saveload
 #Defining the universal variable array 'Player Stats' for use in the whole program.
@@ -152,6 +151,8 @@ while PlayerStats[4] != 10:
         time.sleep(5)
     # Asks if the user wants to go to the shop.
     ShpDec(PlayerStats)
+    # Asks if user wants to go fight in the arena.
+    Arena(PlayerStats)
     # Deletes save file and then replaces the information with the new game state. (This is the save feature)
     saveload.murkfile()
     saveload.save(PlayerStats)
