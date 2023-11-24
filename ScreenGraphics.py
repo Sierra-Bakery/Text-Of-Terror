@@ -83,5 +83,5 @@ def EndGood(PlayerStats):
 def EnterArena():
     waittime = 0.25
     with open("graphics.txt", 'r') as gread:
-        text = gread.readlines()[107:140]
+        text = gread.readlines()[107:127]
     LineDelayEffect(text, waittime)
