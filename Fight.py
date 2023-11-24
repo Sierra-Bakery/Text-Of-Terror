@@ -24,13 +24,15 @@ def PlrToHstl(EnemyStats, EnemyType, PlayerStats):
 		roll = random.randint(1,10)
 		print("Restarting the computer had an effect of ", roll)
 		if roll > 8:
+			dg = random.randint(90,110)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 100
-			print("Critical Hit! You dealt 100 damage against the ", EnemyType)
-		elif roll >= 5:
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("Critical Hit! You dealt ", dg, " damage against the ", EnemyType)
+		elif roll >= 4:
+			dg = random.randint(40,80)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 50
-			print("You dealt 50 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("You dealt ", dg, " damage against the ", EnemyType)
 		else:
 			# Takes health from the enemy and gives attack info
 			print("That sucks, you missed your attack!")
@@ -40,17 +42,20 @@ def PlrToHstl(EnemyStats, EnemyType, PlayerStats):
 		roll = random.randint(1,10)
 		print("Task manager is not responding... but it could still be working... you rolled a ", roll)
 		if roll > 8:
+			dg = random.randint(80,125)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 75
-			print("Critical Hit! You dealt 75 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("Critical Hit! You dealt ", dg, " damage against the ", EnemyType)
 		elif roll > 5:
+			dg = random.randint(40,70)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 50
-			print("You dealt 50 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("You dealt ", dg, " damage against the ", EnemyType)
 		elif roll > 2:
+			dg = random.randint(20,40)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 25
-			print("You dealt 25 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("You dealt ", dg, " damage against the ", EnemyType)
 		else:
 			# Takes health from the enemy and gives attack info
 			print("This attack had no effect at all... better try something else :(")
@@ -60,13 +65,15 @@ def PlrToHstl(EnemyStats, EnemyType, PlayerStats):
 		roll = random.randint(1,5)
 		print("It has been a while since you turned the internet on, your crave for cat videos is too great, you plug it back in and watch. You rolled a ", roll)
 		if roll == 5:
+			dg = random.randint(200,275)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 200
-			print("Critical Hit! You dealt 200 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("Critical Hit! You dealt ", dg, " damage against the ", EnemyType)
 		elif roll > 2:
+			dg = random.randint(20,40)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 25
-			print("You dealt 25 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("You dealt ", dg, " damage against the ", EnemyType)
 		else:
 			# Takes health from the enemy and gives attack info
 			print("The ", EnemyType, " laughs in binary. Your attack had no effect.")
@@ -76,13 +83,15 @@ def PlrToHstl(EnemyStats, EnemyType, PlayerStats):
 		roll = random.randint(1,20)
 		print("You activate the program, the screen flickers a bit, maybe from the intense battle occurring inside the computer? At-least hope that it is. You rolled a ", roll)
 		if roll > 18:
+			dg = random.randint(500,600)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 500
-			print("Critical Hit! You dealt 500 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("Critical Hit! You dealt ", dg, " damage against the ", EnemyType)
 		elif roll > 10:
+			dg = random.randint(25,50)
 			# Takes health from the enemy and gives attack info
-			EnemyStats[0] = EnemyStats[0] - 25
-			print("You dealt 25 damage against the ", EnemyType)
+			EnemyStats[0] = EnemyStats[0] - dg
+			print("You dealt ", dg, " damage against the ", EnemyType)
 		else:
 			# Takes health from the enemy and gives attack info
 			print("You took the risk, it failed, but dont fret, there is always a next time! Your attack had no effect.")
@@ -99,17 +108,17 @@ def HstlToPlr(EnemyType, PlayerStats):
 		print("""CRITICAL HIT!
 		Hope you survive this""")
 		# Takes health from the player and gives attack info
-		enemydmg = random.randint(100,151)
+		enemydmg = random.randint(80,101)
 		PlayerStats[0] = PlayerStats[0] - enemydmg
 		print(EnemyType, " Hit you with ", enemydmg, " damage!")
 	elif roll >= 20:
 		# Takes health from the player and gives attack info
-		enemydmg = random.randint(75, 100)
+		enemydmg = random.randint(50,80)
 		PlayerStats[0] = PlayerStats[0] - enemydmg
 		print("You just escaped the full force of the attack, but still got hit in the process. ", enemydmg, " Damage.")
 	elif roll >= 10:
 		# Takes health from the player and gives attack info
-		enemydmg = random.randint(50, 75)
+		enemydmg = random.randint(20,50)
 		PlayerStats[0] = PlayerStats[0] - enemydmg
 		print("The ", EnemyType, " is somehow tired and only hit you with 25% of max power. ", enemydmg, " Damage.")
 	elif roll > 5:
