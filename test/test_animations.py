@@ -4,10 +4,10 @@ from pathlib import Path
 current_dir = Path(__file__).parent
 sys.path.append(str(current_dir.parent))
 
-import EndScreenGI
+import ScreenGraphics
 
 def test_animation_good(capsys):
-  EndScreenGI.good()
+  ScreenGraphics.good()
   # use strip() to remove special characters from the expected and console out
   # to compare them more easily
   console_out = capsys.readouterr().out.strip()
