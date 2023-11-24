@@ -16,37 +16,6 @@ import devcheats
 import saveload
 #Defining the universal variable array 'Player Stats' for use in the whole program.
 PlayerStats = []
-#ShpDec - Asks if the user wants to go to the shop,
-#Uses the error test module to see if the user's input is good to pass through.
-
-def ShpDec(PlayerStats):
-    # Asks if the user wants to use the shop, this will add a turn to the user.
-    print("""
-    You feel a strange gust of wind, thinking to yourself, 'there is no wind in here'
-    You look around. Off in the distance, you see an Icecream truck. Getting closer, you see the words
-    ByteMerchant - Sales all over the universe!
-    Do you wish to enter the shop (+1 turn) [Y/N] 
-    """)
-    # Validates user input before processing.
-    ShpDec = ERRTST.letterinput()
-    time.sleep(2)
-    if ShpDec == "Y":
-        print("""
-        Entering the shop...""")
-        time.sleep(2)
-        # Adds a turn to the player
-        PlayerStats[3] = PlayerStats[3] + 1
-        # Sends the user to the shop module to start their shopping spree.
-        Shop.shopping(PlayerStats)
-        return PlayerStats
-    elif ShpDec == "N":
-        print("""
-        You decide to pass the shop this time. The Byte Merchant disappears into a bunch of 1s and 0s.""")
-        time.sleep(1)
-        input("...")
-        return PlayerStats
-    else:
-        print("INTERNAL ERROR")
 #main line of code
 # Defining the PlayerStats for later use in the loading of save.
 PlayerStats = [0, 0, 0, 0, 0]
@@ -150,16 +119,16 @@ while PlayerStats[4] != 10:
     """)
         time.sleep(5)
     # Asks if the user wants to go to the shop.
-    ShpDec(PlayerStats)
+    Shop.ShpDec(PlayerStats)
     # Asks if user wants to go fight in the arena.
-    Arena(PlayerStats)
+    Arena.ArenaDec(PlayerStats)
     # Deletes save file and then replaces the information with the new game state. (This is the save feature)
     saveload.murkfile()
     saveload.save(PlayerStats)
 # When the player gets to level 10, they play this level.
 PlayerStats = Levels.level10(PlayerStats)
 print("""
-Sgt. BitMonger: Well done brave soldier! Your name will go down as the greatest in all eternity! Under me ofc!
+Sgt. BitMonger: Well done brave soldier! Your name will go down as the greatest in all eternity! Under me of corse!
 """)
 # If the user survives, it will play a screen where it congratulates the player on their success.
 EndScreenGI.EndGood(PlayerStats)

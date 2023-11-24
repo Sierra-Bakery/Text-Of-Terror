@@ -6,6 +6,37 @@ import random
 import time
 import ERRTST
 
+#ShpDec - Asks if the user wants to go to the shop,
+#Uses the error test module to see if the user's input is good to pass through.
+def ShpDec(PlayerStats):
+    # Asks if the user wants to use the shop, this will add a turn to the user.
+    print("""
+    You feel a strange gust of wind, thinking to yourself, 'there is no wind in here'
+    You look around. Off in the distance, you see an Icecream truck. Getting closer, you see the words
+    ByteMerchant - Sales all over the universe!
+    Do you wish to enter the shop (+1 turn) [Y/N] 
+    """)
+    # Validates user input before processing.
+    ShpDec = ERRTST.letterinput()
+    time.sleep(2)
+    if ShpDec == "Y":
+        print("""
+        Entering the shop...""")
+        time.sleep(2)
+        # Adds a turn to the player
+        PlayerStats[3] = PlayerStats[3] + 1
+        # Sends the user to the shop module to start their shopping spree.
+        shopping(PlayerStats)
+        return PlayerStats
+    elif ShpDec == "N":
+        print("""
+        You decide to pass the shop this time. The Byte Merchant disappears into a bunch of 1s and 0s.""")
+        time.sleep(1)
+        input("...")
+        return PlayerStats
+    else:
+        print("INTERNAL ERROR")
+
 def shopping(PlayerStats):
     # Starts shopping variable to engage the while loop, so there is a choice to keep shopping.
     shopping = "Y"
