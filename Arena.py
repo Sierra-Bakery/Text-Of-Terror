@@ -11,6 +11,10 @@ def ArenaDec(PlayerStats):
     GoIn = ERRTST.letterinput()
     if GoIn == "Y":
         ScreenGraphics.EnterArena()
+        MainArena(PlayerStats)
+        return PlayerStats
     else:
         print("Too scary i guess...")
         return PlayerStats
+def MainArena(PlayerStats):
+    print("Welcome to main arena!")
