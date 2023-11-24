@@ -1,7 +1,7 @@
 #Fight module made on 23/03/2023 By Dylan Baker
 #Purpose: To handle all the fighting mechanics. Determine a winner or loser in fight.
 import ERRTST
-import EndScreenGI
+import ScreenGraphics
 import Hostile
 import random
 import time
@@ -153,7 +153,7 @@ def fight(PlayerStats):
 	time.sleep(1)
 	go = "Y"
 	# Shows ASCII art of the word FIGHT!
-	EndScreenGI.fightart1()
+	ScreenGraphics.fightart1()
 	time.sleep(3)
 	while go == "Y":
 		# Displays general player stat info
@@ -178,7 +178,7 @@ def fight(PlayerStats):
 				input("Press Enter to Continue...")
 				print("Fight.exe: You died!")
 				# Since player has died, has no health left, Displays the ending screen to the game.
-				EndScreenGI.EndBad(PlayerStats)
+				ScreenGraphics.EndBad(PlayerStats)
 				go = "N"
 		else:
 			print("Fight.exe: Congratulations! You somehow defeated a computer program!")

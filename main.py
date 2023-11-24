@@ -8,13 +8,14 @@
 #Going to the shop after every level.
 from Arena import ArenaDec
 import ERRTST
-import EndScreenGI
+import ScreenGraphics
 import Levels
 import Shop
 import sys
 import time
 import devcheats
 import saveload
+import Arena
 #Defining the universal variable array 'Player Stats' for use in the whole program.
 PlayerStats = []
 #main line of code
@@ -43,7 +44,7 @@ WELCOME TO...
 """)
 time.sleep(1)
 # Displays the start screen ASCII art.
-EndScreenGI.start()
+ScreenGraphics.start()
 time.sleep(2)
 Continue = "Y"
 # Asks the user if they want to play the game, if not then it exits the program.
@@ -61,7 +62,7 @@ while Continue == "Y":
         print("Attempting to access antivirus...")
         time.sleep(2)
         # ASCII screen art for the locked out part.
-        EndScreenGI.warn()
+        ScreenGraphics.warn()
         time.sleep(2.5)
         # Asks user if they want to start new or load old save.
         print("""
@@ -82,7 +83,7 @@ while Continue == "Y":
             # Starts the game with level zero that assigns the player stats and gives overview and info on the game. (Tutorial)
             PlayerStats = Levels.levelzero(PlayerStats)
             # Shop function, so the player becomes familiar with what it is.
-            ShpDec(PlayerStats)
+            Shop.ShpDec(PlayerStats)
             Continue = "N"
         elif gamepath == 5:
             # As the name suggests, this is for quick testing for far areas in the game. (Like a portal)
@@ -132,7 +133,7 @@ print("""
 Sgt. BitMonger: Well done brave soldier! Your name will go down as the greatest in all eternity! Under me of corse!
 """)
 # If the user survives, it will play a screen where it congratulates the player on their success.
-EndScreenGI.EndGood(PlayerStats)
+ScreenGraphics.EndGood(PlayerStats)
 time.sleep(7)
 # Exits the program because the user is done.
 sys.exit()

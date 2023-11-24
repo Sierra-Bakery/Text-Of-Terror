@@ -9,7 +9,7 @@ import random
 
 import Fight
 import time
-import EndScreenGI
+import ScreenGraphics
 import saveload
 
 def levelzero(PlayerStats):
@@ -173,7 +173,7 @@ def level3(PlayerStats):
 	print("""
 	You try to read the sign, many letters are missing or distorted...""")
 	time.sleep(3)
-	EndScreenGI.levelart1()
+	ScreenGraphics.levelart1()
 	input("...")
 	print("""
 	Do you press further, disregard the sign? Of course you do! There is no way out otherwise...""")
