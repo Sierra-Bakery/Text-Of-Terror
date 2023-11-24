@@ -31,29 +31,29 @@ def LineDelayEffect(text, waittime):
 
 def good():
     waittime = 1
-    with open("graphics.txt", 'r') as fp:
-        text = fp.readlines()[0:30]
+    with open("graphics.txt", 'r') as gread:
+        text = gread.readlines()[0:30]
     LineDelayEffect(text, waittime)
 def warn():
     waittime = 0.025
-    with open("graphics.txt", 'r') as fp:
-        text = fp.readlines()[31:55]
+    with open("graphics.txt", 'r') as gread:
+        text = gread.readlines()[31:55]
     LineDelayEffect(text, waittime)
 def start():
     waittime = 0.05
-    with open("graphics.txt", 'r') as fp:
-        text = fp.readlines()[92:104]
+    with open("graphics.txt", 'r') as gread:
+        text = gread.readlines()[92:104]
     LineDelayEffect(text, waittime)
 def levelart1():
     waittime = 0
-    with open("graphics.txt", 'r') as fp:
-        text = fp.readlines()[56:83]
+    with open("graphics.txt", 'r') as gread:
+        text = gread.readlines()[56:83]
         print(text)
     LineDelayEffect(text, waittime)
 def fightart1():
     waittime = 0
-    with open("graphics.txt", 'r') as fp:
-        text = fp.readlines()[83:91]
+    with open("graphics.txt", 'r') as gread:
+        text = gread.readlines()[83:91]
     LineDelayEffect(text, waittime)
 # Ending types
 def EndBad(PlayerStats):
