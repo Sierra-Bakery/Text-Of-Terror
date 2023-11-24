@@ -1,10 +1,8 @@
 import Levels
 import Shop
-
-
 def start():
     print("Enabling developer cheats...")
-    PlayerStats = [9999999, 99999999, 999999, 99999, 999999]
+    PlayerStats = [999999, 999999, 999999, 999999, 999999]
     print(PlayerStats)
     lvl = int(input("Levels 0 to 10 or 11 for Shop >>> "))
     if lvl == 0:
