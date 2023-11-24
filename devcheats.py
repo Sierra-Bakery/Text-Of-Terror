@@ -1,10 +1,11 @@
 import Levels
 import Shop
+import Arena
 def start():
     print("Enabling developer cheats...")
     PlayerStats = [999999, 999999, 999999, 999999, 999999]
     print(PlayerStats)
-    lvl = int(input("Levels 0 to 10 or 11 for Shop >>> "))
+    lvl = int(input("Levels 0 to 10 or 11 for Shop or 12 for Arena >>> "))
     if lvl == 0:
         Levels.levelzero(PlayerStats)
     elif lvl == 1:
@@ -29,5 +30,7 @@ def start():
         PlayerStats = Levels.level10(PlayerStats)
     elif lvl == 11:
         PlayerStats = Shop.shopping(PlayerStats)
+    elif lvl == 12:
+        PlayerStats = Arena.ArenaDec(PlayerStats)
     else:
         print("Going to next...")

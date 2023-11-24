@@ -12,4 +12,5 @@ def ArenaDec(PlayerStats):
     if GoIn == "Y":
         ScreenGraphics.EnterArena()
     else:
+        print("Too scary i guess...")
         return PlayerStats
