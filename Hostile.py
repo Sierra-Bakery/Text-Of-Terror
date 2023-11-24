@@ -33,13 +33,18 @@ def HostileSlct(PlayerStats):
 def HostileStats(EnemyType):
     # Depending on the name, the values health and reward for kill is given.
     if EnemyType == "Bug":
-        EnemyStats = [100, 20]
+        c = random.randint(20,50)
+        EnemyStats = [100, c]
     elif EnemyType == "Virus":
-        EnemyStats = [250, 50]
+        c = random.randint(50,100)
+        EnemyStats = [250, c]
     elif EnemyType == "Malware":
-        EnemyStats = [500, 100]
+        c = random.randint(100,150)
+        EnemyStats = [500, c]
     elif EnemyType == "Trojan":
-        EnemyStats = [750, 250]
+        c = random.randint(250,350)
+        EnemyStats = [750, c]
     elif EnemyType == "MEMZ.exe":
-        EnemyStats = [2000, 1000]
+        c = random.randint(1000,2500)
+        EnemyStats = [2000, c]
     return EnemyStats
