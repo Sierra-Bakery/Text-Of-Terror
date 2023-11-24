@@ -162,6 +162,6 @@ Sgt. BitMonger: Well done brave soldier! Your name will go down as the greatest 
 """)
 # If the user survives, it will play a screen where it congratulates the player on their success.
 EndScreenGI.EndGood(PlayerStats)
-time.sleep(5)
+time.sleep(7)
 # Exits the program because the user is done.
 sys.exit()

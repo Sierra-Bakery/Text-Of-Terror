@@ -29,14 +29,14 @@ def letterinput():
     # Returns good response back to the current line of code.
     return inpt
 def numberinput():
-    inpt = 0
     # Defines the desired input, gets it from the user, and assigns it to be tested if it is okay to be passed.
-    inptnml = input("[1/2/3/4] >>> ")
-    if inptnml.isdigit():
-        print("You put ", inpt)
-        while inpt not in range(1, 6):
-            # If user input is incorrect, or doesn't align to the requirement, it will ask over and over again until correct.
-            inpt = int(input("Please enter a number between 1 and 4: "))
+    digit = int(input("[1/2/3/4] >>> "))
+    print("You put ", digit)
+    while digit != 1 and digit != 2 and digit != 3 and digit != 4 and digit != 5:
+        # If user input is incorrect, or doesn't align to the requirement, it will ask over and over again until correct.
+        print("Please input a number between 1 and 4.")
+        digit = int(input("[1/2/3/4] >>> "))
+    inpt = digit
     # Returns good response back to the current line of code.
     return inpt
 
