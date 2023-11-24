@@ -79,5 +79,9 @@ def EndGood(PlayerStats):
     time.sleep(4)
     # Stops the game as the user is finished. There is nothing more, nothing less.
     print("Bye! :) Thanks for playing")
-
     sys.exit()
+def EnterArena():
+    waittime = 0.25
+    with open("graphics.txt", 'r') as gread:
+        text = gread.readlines()[107:140]
+    LineDelayEffect(text, waittime)
